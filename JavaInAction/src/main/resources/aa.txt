@@ -1,0 +1,58 @@
+删除自带的vi，重新安装vi
+
+apt-get remove vim-common
+
+sudo apt-get install vim
+
+开通ssh
+apt-get install openssh-server
+sudo vi /etc/ssh/sshd_config
+找到：PermitRootLogin prohibit-password禁用
+添加：PermitRootLogin yes
+sudo service ssh restart
+A
+开通vsftp
+sudo apt-get install vsftpd
+
+更改初始化用户名
+usermod -l haiden1 -md /home/haiden1 haiden3
+groupmod -n haiden1 haiden3
+
+
+2017-07-25
+
+RMI
+
+2018--3-7
+
+sqlplus scott/haiden@//192.168.1.108:1521/orcl
+
+sqlplus scott/haiden
+sqlplus scott/haiden@orcl
+2018--3-10
+台式机 oracle后台登录sys/root
+笔记本：oracle后台登录sys/haiden
+
+2018-3-16
+jenkins gree/root
+
+2018-3-18
+oracle 11G scott/root sys/haiden
+2018-3-19
+阿里云加速:0411hudeng@163.com/52591234hd
+
+2018-3-20
+
+还可以安装另外一个比较强的工具: sudo apt-get install sysv-rc-conf sysvconfig
+启动: sudo sysv-rc-conf 它可心配置各服务在各级别上的启动情况.
+随时想启动某个服务, 可以这样: sudo /etc/init.d/ServiceName start
+systemctl enable *.service #开机运行服务
+systemctl disable *.service #取消开机运行
+systemctl start *.service #启动服务
+systemctl stop *.service #停止服务
+systemctl restart *.service #重启服务
+systemctl reload *.service #重新加载服务配置文件
+systemctl status *.service #查询服务运行状态
+
+/etc/init.d/ServiceName start
+
